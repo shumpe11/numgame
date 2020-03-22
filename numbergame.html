@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>数字追いゲーム</title>
+<meta charset="utf-8" />
+</head>
+<style>
+html{
+background-color:gray;
+text-align:center;
+}
+
+h1 {
+color:white;
+font-size: 22px;
+}
+
+	h2{
+		font-size: 19px;
+		color:white;
+		margin-bottom: 5px;
+	}
+
+#stopwatch {
+color:red;
+font-size: 19px;
+-webkit-text-size-adjust: none;
+}
+
+.gamespace{
+height:550px;
+width:550px;
+margin: 0 auto;
+background-color:white;
+border-radius:15px;
+}
+
+.number{
+width:25%;
+height:25%;
+font-size:50px;
+display:inline-block;
+margin:20px;
+color:white;
+border-radius:15px;
+background-color: gray;
+box-shadow: 0 10px 0 rgba(60,60,60,20)
+}
+
+.number:active{	
+box-shadow: none;
+transform: translate3d(0, 10px, 0);
+}
+
+span{
+font-size: 19px;
+margin:3px;
+color:red;
+}
+	
+	#start{
+	box-shadow: 0 6px 0 rgba(255,255,255,20)
+	}
+	
+	#start:active{
+		box-shadow: none;
+		transform: translate3d(0, 6px, 0);
+	}
+
+	#result{
+		color:red;
+		font-size: 19px;
+		margin: 5px 0;
+		
+	}	
+	
+</style>
+<body>
+<h1>数字追いゲーム</h1>
+
+<div id="time">
+  <h2>経過時間:<span id="stopwatch" style="font-size:19px;"> 0.000</span></h2>	
+</div>
+	
+<p id="result"></p>
+
+<div class="gamespace">
+
+<button class="number" type="button" name="n1" value="num1" style="float:left" onclick="check(this)"><p id="n1"> </p></button>
+<button class="number" type="button" name="n2" value="num2" onclick="check(this)"><p id="n2"> </p></button>
+<button class="number" type="button" name="n3" value="num3" onclick="check(this)"><p id="n3"> </p></button>
+<button class="number" type="button" name="n4" value="num4" onclick="check(this)"><p id="n4"> </p></button>
+<button class="number" type="button" name="n5" value="num5" onclick="check(this)"><p id="n5"> </p></button>
+<button class="number" type="button" name="n6" value="num6" onclick="check(this)"><p id="n6"> </p></button>
+<button class="number" type="button" name="n7" value="num7" onclick="check(this)"><p id="n7"> </p></button>
+<button class="number" type="button" name="n8" value="num8" onclick="check(this)"><p id="n8"> </p></button>
+<button class="number" type="button" name="n9" value="num9" onclick="check(this)"><p id="n9"> </p></button>
+
+<!--
+<input type="button" class="number" name="n1" style="float:left;">
+<input type="button" class="number" name="n2">
+<input type="button" class="number" name="n3">
+<input type="button" class="number" name="n4">
+<input type="button" class="number" name="n5">
+<input type="button" class="number" name="n6">
+<input type="button" class="number" name="n7">
+<input type="button" class="number" name="n8">
+<input type="button" class="number" name="n9">-->
+</div>
+
+<button type="button" name="start" id="start" onclick="gamestart();timerstart()" style="height:50px; width:200px; margin:10px; background-color:red; color:white">START!</button>
+
+
+
+<script type="text/javascript" src="number.js">
+</script>
+</body>
+</html>
